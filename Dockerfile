@@ -1,6 +1,6 @@
 # Stage 1: Compile and Build the app
 
-# Node veersion
+# Node version
 FROM node:14.17.3-alpine as build
 
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
@@ -17,7 +17,7 @@ RUN yarn install --frozen-lockfile
 RUN yarn bootstrap
 
 # HERE ADD YOUR STORE WALLET ADDRESS
-ENV REACT_APP_STORE_OWNER_ADDRESS_ADDRESS=""
+ENV REACT_APP_STORE_OWNER_ADDRESS_ADDRESS="6inLhKqNM1hRp6N4xp4K6j4Hdf2TmMK3GGDTAnT9y1Hs"
 
 # Generate the build of the application
 RUN yarn build
